@@ -1,11 +1,12 @@
 import os
 from flask import Flask
+from flask import render_template
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-	return 'Welcome to my Website!'
+	return render_template('index.html')
 #import application.models
 #import application.views
 #import application.controllers
