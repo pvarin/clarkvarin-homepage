@@ -1,10 +1,27 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Clark Varin</title>	
-</head>
+{% extends "base.html" %}
 
-<body>
-	Welcome to my website!
-</body>
-</html>
+<!-- Add style -->
+{% block styles %}
+{{super()}}
+<link href="{{url_for('static',filename='css/index.css')}}" rel="stylesheet">
+{% endblock %}
+
+<!-- Set the page title suffix-->
+{% set pagetitle='- Home'%}
+
+
+{% block content %}
+<div class="container">
+	<div class="jumbotron">
+		<div class="row">
+			<div class="col-md-4">
+				<img src="{{url_for('static',filename='img/clark.jpg')}}" class="img-thumbnail">
+			</div>
+			<div class="col-md-8">
+				<h1>Welcome!</h1>
+				<p>Welcome to my homepage! My name is Clark Varin. I am a budding entrepreneur and a student at the University of Minnesota: Twin Cities. This is my homepage, where I keep all of my ideas and share all of my thoughts.</p>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
