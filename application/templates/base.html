@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html lang='en'>
+<head>
+	{%include 'head.html'%}
+	<!-- Include Other Styles -->
+	{% block styles %}{% endblock %}
+	<!-- Include Other Scripts -->
+	{% block scripts %}{% endblock %}
+</head>
+
+
+<body>
+	{% include 'navbar.html' %}
+	{% block content %}
+	{% endblock %}
+	{% include 'footer.html' %}
+</body>
+</html>
